@@ -1,0 +1,16 @@
+package Page;
+
+import Common.BasePage;
+import Common.CommonUIBean;
+import macaca.client.common.GetElementWay;
+
+public class QQHomePage extends BasePage {
+	
+	  public static final CommonUIBean LOGIN_BUTTON = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/btn_login", "First Login Button");
+	  public static final CommonUIBean REGISTE = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/btn_register", "Registe Button");
+	  public static final CommonUIBean USERNAME = new CommonUIBean(GetElementWay.XPATH, ".//android.widget.EditText[contains(@content-desc, '请输入QQ号码或手机或邮箱')]", "UserName InputBox");
+	  public static final CommonUIBean PASSWORD = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/password", "Password InputBox");
+	  public static final CommonUIBean LOGIN = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/login", "Login Button");
+	  public static final CommonUIBean FORGET_PASSWORD = new CommonUIBean(GetElementWay.XPATH, ".//android.widget.Button[contains(@text, '忘记密码？')]", "Forget Password Button");
+	  public static final CommonUIBean NEW_USER = new CommonUIBean(GetElementWay.XPATH, ".//android.widget.Button[contains(@text, '新用户注册')]", "New User Button");
+}

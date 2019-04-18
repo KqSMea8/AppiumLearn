@@ -1,0 +1,7 @@
+package Spec;
+
+
+public class AndroidSampleTest {
+	
+	@Test
+}

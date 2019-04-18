@@ -1,0 +1,8 @@
+2019-04-11 12:51:11 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.error(Log.java:22) ]
+ERROR:.\Config\config.properties (系统找不到指定的文件。)
+2019-04-11 14:09:48 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.error(Log.java:22) ]
+ERROR:文件名、目录名或卷标语法不正确。
+2019-04-11 14:09:48 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.error(Log.java:22) ]
+ERROR:Searching com.tencent.mobileqq:id/btn_login failed.
+2019-04-11 14:31:36 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.error(Log.java:22) ]
+ERROR:Searching btn_login failed.

@@ -1,0 +1,14 @@
+package Spec;
+
+
+import org.junit.Test;
+
+import Flow.HomePageFlow;
+
+public class DesktopSampleTest {
+
+	@Test
+	public void testCaseOne() {
+		HomePageFlow.login("18162690619", "Wpb9940902");
+	}
+}

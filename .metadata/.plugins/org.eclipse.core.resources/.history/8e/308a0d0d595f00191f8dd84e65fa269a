@@ -1,0 +1,15 @@
+package Page;
+
+import Common.BasePage;
+import Common.CommonUIBean;
+import macaca.client.common.GetElementWay;
+
+public class QQHomePage extends BasePage {
+	
+	  public static final CommonUIBean LOGIN_BUTTON = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/btn_login", "Login Button");
+	  public static final CommonUIBean REGISTE = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/btn_login", "Login Button");
+	  public static final CommonUIBean LOGIN_BUTTON = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/btn_login", "Login Button");
+	  public static final CommonUIBean LOGIN_BUTTON = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/btn_login", "Login Button");
+	  public static final CommonUIBean LOGIN_BUTTON = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/btn_login", "Login Button");
+	  public static final CommonUIBean LOGIN_BUTTON = new CommonUIBean(GetElementWay.ID, "com.tencent.mobileqq:id/btn_login", "Login Button");
+}

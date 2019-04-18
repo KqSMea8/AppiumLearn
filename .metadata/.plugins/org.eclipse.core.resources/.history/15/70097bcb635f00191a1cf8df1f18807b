@@ -1,0 +1,16 @@
+package Spec;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import Flow.HomePageFlow;
+import Utils.Config;
+
+public class DesktopSampleTest {
+
+	@Test
+	public void testCaseOne() {
+		HomePageFlow.login(Config.USER_NAME, Config.PASSWORD);
+		Assert.assertTrue(HomePageFlow.isAtWelcomePage());
+	}
+}

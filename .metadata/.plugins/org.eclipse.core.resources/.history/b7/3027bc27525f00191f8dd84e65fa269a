@@ -1,0 +1,13 @@
+package Spec;
+
+import org.testng.annotations.Test;
+
+import Flow.HomePageFlow;
+
+public class DesktopSampleTest2 {
+
+	@Test
+	public void testCaseOne() {
+		HomePageFlow.login("18162690619", "Wpb9940902");
+	}
+}

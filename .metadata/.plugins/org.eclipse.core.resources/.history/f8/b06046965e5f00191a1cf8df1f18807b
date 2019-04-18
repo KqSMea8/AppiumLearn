@@ -1,0 +1,47 @@
+package Utils;
+
+import java.io.File;
+
+
+public class Config {
+
+    // 根目录
+    public static final String ROOT_PATH = System.getProperty("user.dir");
+    //截图保存目录
+    public static final String SCREEN_SHOT_PATH = ROOT_PATH + File.separator + "screenshot";
+    //结果日志保存文件
+    public static final String RESULT_LOG_PATH = ROOT_PATH + File.separator + "result.log";
+
+    // 用户名
+    public static final String USER_NAME = "18162690619";
+    // 密码
+    public static final String PASSWORD = "Wpb9940902";
+    
+    // QQ用户名
+    public static final String QQ_USER_NAME = "535253990";
+    // QQ密码
+    public static final String QQ_PASSWORD = "1111122222";
+    // 目标平台- ios android
+    public static final String PLATFORM = "pc";
+    // 是否覆盖安装 3-覆盖安装
+    public static final int REUSE = 3;
+
+    // ios平台相关信息 各参数含义参考 https://macacajs.github.io/macaca/desired-caps.html
+    public static final String IOS_PLATFORM_NAME = "ios";
+    public static final String IOS_DEVICE_NAME = "iPhone 6s";
+    public static final String IOS_APP = "C:\\Users\\wb-wpb535945\\Downloads\\ios-app-bootstrap.zip";
+//    public static final String IOS_UDID = "3458343D-AFB1-46E1-BE33-99E04B2DE07";
+
+    // 安卓平台相关信息
+    public static final String ADR_PLATFORM_NAME = "android";
+    public static final String ADR_APP = ROOT_PATH + File.separator + "app/android-app-bootstrap.zip";
+    // 多台设备时，如果指定某一台设备可以在这里指定udid
+    public static final String ADR_UDID = "";
+    public static final String PACKAGE = "com.tencent.mobileqq";
+    public static final String ACTIVITY = ".activity.LoginActivity";
+    
+    
+    public static final String PC_PLATFORM_NAME = "desktop";
+    public static final String PC_BROWSER = "chrome";
+    public static final String PC_URL = "https://www.baidu.com/";
+}

@@ -1,0 +1,37 @@
+package Flow;
+
+import Common.BasePage;
+import Page.HomePage;
+import Utils.Log;
+import macaca.client.commands.Element;
+
+
+public class HomePageFlow extends BasePage {
+	
+	public static void login(String userName, String passWord) {
+		HomePage homePage = new HomePage();
+		if (homePage.isElementExistAfterWaiting(HomePage.OTHERLOGIN)) {
+			try {
+				homePage.otherLogin().click();
+				homePage.passwordLogin().click();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		try {
+			Log.info("Input UserName and PassWord");
+			homePage.userName().sendKeys(userName);
+			homePage.passWord().sendKeys(passWord);
+			Log.info("Click login button");
+			homePage.login().click();
+		} catch (Exception e) {
+			Log.error(e.getMessage());
+		}
+	}
+	
+	public static boolean isAtWelcomePage() {
+		HomePage homePage = new HomePage();
+		return homePage.isElementExistAfterWaiting(HomePage.WELCOME);
+	}
+}

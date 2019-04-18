@@ -1,0 +1,37 @@
+package Page;
+
+import Common.BasePage;
+import Common.CommonUIBean;
+import macaca.client.commands.Element;
+import macaca.client.common.GetElementWay;
+
+public class HomePage extends BasePage {
+    public static final CommonUIBean LOGIN_BUTTON = new CommonUIBean(GetElementWay.XPATH, ".//input[@name='domainAccount']", "Login Button");
+    public static final CommonUIBean USER_LOGIN_BUTTON = new CommonUIBean(GetElementWay.ID, "TANGRAM__PSP_10__footerULoginBtn", "Use user name to login");
+    public static final CommonUIBean USERNAME_INPUTBOX = new CommonUIBean(GetElementWay.XPATH, ".//input[@name='domainAccount']", "User name input box");
+    public static final CommonUIBean PASSWORD_INPUTBOX = new CommonUIBean(GetElementWay.XPATH, ".//input[@name='password']", "Pass word input box");
+    public static final CommonUIBean LOGIN = new CommonUIBean(GetElementWay.CSS, ".kuma-button-primary", "Login");
+    
+    public static final CommonUIBean WELCOME = new CommonUIBean(GetElementWay.CSS, ".buc-welcome-content", "Welcome Page");
+    
+   
+    public Element loginButton() {
+		return findElement(LOGIN_BUTTON);
+	}
+    
+    public Element userLoginButton() {
+		return findElement(USER_LOGIN_BUTTON);
+	}
+    
+    public Element userName() {
+		return findElement(USERNAME_INPUTBOX);
+	}
+    
+    public Element passWord() {
+		return findElement(PASSWORD_INPUTBOX);
+	}
+    
+    public Element login() {
+		return findElement(LOGIN);
+	}
+}

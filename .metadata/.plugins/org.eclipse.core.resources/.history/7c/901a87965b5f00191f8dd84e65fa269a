@@ -1,0 +1,10 @@
+package Spec;
+
+
+public class AndroidSampleTest {
+	
+	@org.testng.annotations.Test
+	public void login() {
+		
+	}
+}

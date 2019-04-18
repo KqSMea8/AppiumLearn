@@ -1,0 +1,46 @@
+package Common;
+
+import com.alibaba.fastjson.JSONObject;
+
+import Utils.Config;
+import macaca.client.MacacaClient;
+
+
+public class InitDriver {
+	
+	private static MacacaClient driver;
+	
+	/**
+	 * Navigate to the initial URL set the implicitly wait for 5 second and maximize the window
+	 * @return WebDriver
+	 * @throws Exception 
+	 */
+	public static MacacaClient getDriver() throws Exception {
+        // 初始化应用基础信息
+        JSONObject props = new JSONObject();
+        if (Config.PLATFORM.equals("ios")) {
+            // 创建ios实例
+            props.put("app", Config.IOS_APP);
+            props.put("platformName", Config.IOS_PLATFORM_NAME);
+            props.put("deviceName", Config.IOS_DEVICE_NAME);
+//			props.put("udid", Config.IOS_UDID);
+            props.put("reuse", Config.REUSE);
+        } else if (Config.PLATFORM.equals("android")) {
+        	//创建安卓实例
+            props.put("app", Config.ADR_APP);
+            props.put("reuse", Config.REUSE);
+            props.put("platformName", Config.ADR_PLATFORM_NAME);
+		} else {
+			//创建Web实例
+			props.put("browserName", "electron");
+			props.put("platformName", "desktop");
+        }
+        JSONObject desiredCapabilities = new JSONObject();
+        desiredCapabilities.put("desiredCapabilities", props);
+        driver.initDriver(desiredCapabilities);
+        if (Config.PLATFORM.equals("pc")) {
+        	driver.get(Config.PC_URL);
+        }
+		return driver;
+	}
+}

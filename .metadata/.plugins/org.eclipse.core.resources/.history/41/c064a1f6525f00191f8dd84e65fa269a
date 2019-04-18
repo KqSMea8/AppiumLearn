@@ -1,0 +1,52 @@
+package Common;
+
+import com.alibaba.fastjson.JSONObject;
+
+import Utils.Config;
+import macaca.client.MacacaClient;
+
+
+public class InitDriver {
+	
+	private static MacacaClient driver;
+	
+	/**
+	 * Navigate to the initial URL set the implicitly wait for 5 second and maximize the window
+	 * @return WebDriver
+	 * @throws Exception 
+	 */
+	public static MacacaClient getDriver() throws Exception {
+        // 初始化应用基础信息
+        JSONObject props = new JSONObject();
+        if (Config.PLATFORM.equals("ios")) {
+            // 创建ios实例
+            props.put("app", Config.IOS_APP);
+            props.put("platformName", Config.IOS_PLATFORM_NAME);
+            props.put("deviceName", Config.IOS_DEVICE_NAME);
+//			props.put("udid", Config.IOS_UDID);
+            props.put("reuse", Config.REUSE);
+            JSONObject desiredCapabilities = new JSONObject();
+            desiredCapabilities.put("desiredCapabilities", props);
+            driver.initDriver(desiredCapabilities);
+        } else if (Config.PLATFORM.equals("android")) {
+        	//创建安卓实例
+            props.put("app", Config.ADR_APP);
+            props.put("reuse", Config.REUSE);
+            props.put("platformName", Config.ADR_PLATFORM_NAME);
+            JSONObject desiredCapabilities = new JSONObject();
+            desiredCapabilities.put("desiredCapabilities", props);
+            driver.initDriver(desiredCapabilities);
+		} else {
+			//创建Web实例
+			props.put("browserName", "electron");
+			props.put("platformName", "desktop");
+	        JSONObject desiredCapabilities = new JSONObject();
+	        desiredCapabilities.put("desiredCapabilities", props);
+	        //desiredCapabilities.put("host", "127.0.0.1"); // custom remote host
+	        //desiredCapabilities.put("port", 3456);        // custom remote port
+	        driver.initDriver(desiredCapabilities).setWindowSize(1280, 800)
+	                .get(Config.PC_URL);
+        }
+		return driver;
+	}
+}

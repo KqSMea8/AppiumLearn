@@ -1,0 +1,11 @@
+package Spec;
+
+import org.junit.Test;
+
+public class AndroidSampleTest {
+	
+	@Test
+	public void login() {
+		
+	}
+}

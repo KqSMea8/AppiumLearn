@@ -1,0 +1,23 @@
+package Test;
+
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class PCTest {
+
+    private static RemoteWebDriver qq = null;
+
+    public static void main(String[] args) throws Exception{
+           DesiredCapabilities cap = new DesiredCapabilities();
+           cap.setCapability("platformName","Windows");
+           cap.setCapability("deviceName","WindowsPC");
+           cap.setCapability("app","C:\\Program Files\\Tencent\\QQ\\Bin\\QQScLauncher.exe");
+           qq = new RemoteWebDriver(new URL("http://127.0.0.1:4723"),cap);
+
+           qq.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+           qq.findElementByName("QQ号码").sendKeys("123456");
+           qq.findElementByName("密码").sendKeys("123456");
+}

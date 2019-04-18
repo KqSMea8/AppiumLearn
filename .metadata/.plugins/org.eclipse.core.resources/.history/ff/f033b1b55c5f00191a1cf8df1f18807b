@@ -1,0 +1,139 @@
+package Spec;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
+import macaca.client.MacacaClient;
+import macaca.client.commands.Element;
+import macaca.client.common.GetElementWay;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import java.io.File;
+import java.io.IOException;
+
+import static org.hamcrest.CoreMatchers.containsString;
+
+public class IosSampleTest {
+    MacacaClient driver = new MacacaClient();
+
+
+    public IosSampleTest() throws IOException {
+    }
+
+    @Before
+    public void setUp() throws Exception {
+        // platform: android or ios
+        String platform = "ios";
+
+        /*
+           Desired Capabilities are used to configure webdriver when initiating the session.
+           Document URL: https://macacajs.github.io/desired-caps.html
+         */
+        JSONObject porps = new JSONObject();
+        porps.put("platformName", platform);
+        // It takes time to download. Patient or just build your own using https://github.com/xudafeng/ios-app-bootstrap
+        porps.put("app", "https://npmcdn.com/ios-app-bootstrap@latest/build/ios-app-bootstrap.zip");
+        porps.put("reuse", 1);
+
+        porps.put("deviceName", "iPhone 6s");
+
+        JSONObject desiredCapabilities = new JSONObject();
+        desiredCapabilities.put("desiredCapabilities", porps);
+        driver.initDriver(desiredCapabilities);
+    }
+
+    @Test
+    public void testCaseOne() throws Exception {
+
+
+        System.out.println("------------#1 login test-------------------");
+        loginTest();
+
+        System.out.println("------------#2 scroll tableview test-------------------");
+        scrollTableViewTest();
+
+        System.out.println("------------#5 logout test-------------------");
+        logoutTest();
+
+    }
+
+    public void loginTest() throws Exception {
+
+        driver.elementByXPath("//XCUIElementTypeTextField[1]").sendKeys("中文+Test+12345678");
+        driver.elementByXPath("//XCUIElementTypeSecureTextField[1]").sendKeys("111111");
+        // Hide keyboard
+        // driver.elementByName("Done").click();
+        // login
+        driver.elementByName("Login").click();
+    }
+
+    public void scrollTableViewTest() throws Exception {
+        driver.elementByName("HOME").click();
+        driver.elementByName("list").click();
+        driver.sleep(1000);
+
+        //  ci tap()
+        // 比如需要点击某个控件的特定位置
+        Element alertCell = driver.getElement(GetElementWay.NAME, "Alert");
+        JSONObject alertCellRect = (JSONObject) alertCell.getRect();
+        int x = alertCellRect.getIntValue("x");
+        int y = alertCellRect.getIntValue("y");
+        int width = alertCellRect.getIntValue("width");
+        int height = alertCellRect.getIntValue("height");
+        int centerX = x + width / 2;
+        int centerY = y + height / 2;
+
+        driver.tap(centerX, centerY);
+        driver.sleep(1000);
+        driver.dismissAlert();
+
+        // 通过右滑的方式返回上一层
+        driver.sleep(1000);
+        customBack();
+
+        // 拖拽一个元素或者在多个坐标之间移动,实现tableview滚动操作
+        driver.drag(200, 420, 200, 20, 2);
+        driver.sleep(1000);
+        customBack();
+        driver.sleep(1000);
+    }
+
+
+    public void logoutTest() throws  Exception {
+
+        switchToNative(driver).elementByName("PERSONAL").click();
+        driver.sleep(1000);
+        driver.elementByName("Logout").click();
+        driver.sleep(1000);
+    }
+
+
+    public void customBack() {
+        // iOS通过视图的右滑完成返回操作
+        try {
+            driver.drag(0, 100, 300, 100, 0.5);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    // switch to the context of the last pushed webview
+    public MacacaClient switchToWebView(MacacaClient driver) throws Exception {
+        JSONArray contexts = driver.contexts();
+        return driver.context(contexts.get(contexts.size() - 1).toString());
+    }
+
+    // switch to the context of native
+    public MacacaClient switchToNative(MacacaClient driver) throws Exception {
+        JSONArray contexts = driver.contexts();
+        return driver.context(contexts.get(0).toString());
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        driver.quit();
+    }
+}

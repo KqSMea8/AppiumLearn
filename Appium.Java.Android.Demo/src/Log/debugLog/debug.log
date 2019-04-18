@@ -1,0 +1,86 @@
+2019-04-11 12:51:11 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.error(Log.java:22) ]
+ERROR:.\Config\config.properties (系统找不到指定的文件。)
+2019-04-11 12:52:19 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the config.properties.
+2019-04-11 12:53:38 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the config.properties.
+2019-04-11 12:56:02 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the config.properties.
+2019-04-11 12:57:23 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the config.properties.
+2019-04-11 12:58:28 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 13:00:27 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 13:39:56 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 13:40:07 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Waiting for com.tencent.mobileqq:id/btn_login ...
+2019-04-11 13:41:39 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 13:42:19 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 13:44:10 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 13:44:20 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Waiting for com.tencent.mobileqq:id/btn_login ...
+2019-04-11 13:44:20 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Succeeded.
+2019-04-11 13:44:26 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Waiting for com.tencent.mobileqq:id/password ...
+2019-04-11 13:44:26 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Succeeded.
+2019-04-11 13:44:32 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Waiting for com.tencent.mobileqq:id/btn_login ...
+2019-04-11 14:07:23 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Login with special user info
+2019-04-11 14:07:23 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 14:07:36 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:It's the first page for login, need to click Login Button
+2019-04-11 14:07:36 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Succeeded.
+2019-04-11 14:07:37 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Succeeded.
+2019-04-11 14:07:37 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:The current user info is not same as except, Clear the info and login
+2019-04-11 14:07:56 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Succeeded.
+2019-04-11 14:07:56 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Close the driver
+2019-04-11 14:09:35 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Login with special user info
+2019-04-11 14:09:35 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 14:09:48 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.error(Log.java:22) ]
+ERROR:文件名、目录名或卷标语法不正确。
+2019-04-11 14:09:48 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the ScreenShot: FAILURE(search)_com.tencent.mobileqq:id/btn_login_04_11_14_09.png
+2019-04-11 14:09:48 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.error(Log.java:22) ]
+ERROR:Searching com.tencent.mobileqq:id/btn_login failed.
+2019-04-11 14:09:49 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:The current user info is same as except, direct login
+2019-04-11 14:09:50 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Close the driver
+2019-04-11 14:17:45 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Login with special user info
+2019-04-11 14:17:45 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 14:20:46 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Login with special user info
+2019-04-11 14:20:46 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 14:23:08 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Login with special user info
+2019-04-11 14:23:09 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 14:31:26 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Login with special user info
+2019-04-11 14:31:26 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Get the infomations from the driverConfig.properties.
+2019-04-11 14:31:36 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.error(Log.java:22) ]
+ERROR:Searching btn_login failed.
+2019-04-11 14:31:59 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:The current user info is same as except, direct login
+2019-04-11 14:32:00 下午 [Thread: main][ Class:Utils.Log >> Method: Utils.Log.info(Log.java:12) ]
+INFO:Close the driver

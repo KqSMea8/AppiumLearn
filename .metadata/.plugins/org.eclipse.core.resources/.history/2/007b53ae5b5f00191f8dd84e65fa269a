@@ -1,0 +1,13 @@
+package Spec;
+
+import org.testng.annotations.Test;
+
+import Flow.QQHomePageFlow;
+
+public class AndroidSampleTest {
+	
+	@Test
+	public void login() throws Exception {
+		QQHomePageFlow.login("", "");
+	}
+}

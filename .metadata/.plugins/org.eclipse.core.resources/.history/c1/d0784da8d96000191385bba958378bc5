@@ -1,0 +1,24 @@
+package Test;
+
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class PCTest {
+
+	private static RemoteWebDriver chrome = null;
+
+	public static void main(String[] args) throws Exception {
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability("platformName", "Windows");
+		cap.setCapability("deviceName", "WindowsPC");
+		cap.setCapability("app", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+		chrome = new RemoteWebDriver(new URL("http://127.0.0.1:4723"), cap);
+
+		chrome.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		chrome.findElementByName("QQ号码").sendKeys("123456");
+		chrome.findElementByName("密码").sendKeys("123456");
+	}
+}

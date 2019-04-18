@@ -1,0 +1,33 @@
+package Flow;
+
+import Page.QQHomePage;
+import Utils.Log;
+
+public class QQHomePageFlow {
+
+	/**
+	 * Login with special user info
+	 * @param userName
+	 * @param passWord
+	 */
+	public static void login(String userName, String passWord) {
+		QQHomePage loginPage = new QQHomePage();
+		boolean isFirstLoginPage = loginPage.isElementExist(QQHomePage.LOGIN_BUTTON);
+		if (isFirstLoginPage) {
+			Log.info("It's the first page for login, need to click Login Button");
+			loginPage.loginButton().click();			
+		}
+		WebElement user = loginPage.userName();
+		WebElement password = loginPage.passWord();
+		if(user.getText().equalsIgnoreCase(userName)) {
+			Log.info("The current user info is same as except, direct login");
+		} else {
+			Log.info("The current user info is not same as except, Clear the info and login");
+			user.clear();
+			user.sendKeys(userName);
+			password.clear();
+			password.sendKeys(passWord);
+		}
+		loginPage.login().click();			
+	}
+}

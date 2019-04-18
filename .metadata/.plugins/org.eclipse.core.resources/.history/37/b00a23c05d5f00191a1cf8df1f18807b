@@ -1,0 +1,14 @@
+package Spec;
+
+import org.testng.annotations.Test;
+
+import Flow.QQHomePageFlow;
+import Utils.Config;
+
+public class AndroidSampleTest {
+	
+	@Test
+	public void login() throws Exception {
+		QQHomePageFlow.login(Config.QQ_USER_NAME, Config.QQ_PASSWORD);
+	}
+}

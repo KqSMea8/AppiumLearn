@@ -1,0 +1,8 @@
+package Spec;
+
+import org.junit.Test;
+
+public class AndroidSampleTest {
+	
+	@Test
+}
